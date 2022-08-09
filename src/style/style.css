@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --green : #3C8934;
+    --green-light: #83BB26;
+    --yellow: #B5CD18;
+    --yellow2: #CDD62A;
+    --yellow3: #FEDD05;
+    --yellow4: #FED800;
+    --yellow5: #FDD400;
+    --yellow6: #FAC800;
+}
+body {
+    background-color: var(--yellow6);
+}
+body .primera-imagen {
+    width: 100%;
+}
+header {
+    width: 99%; 
+    margin: auto;
+}
+header section {
+    background-color: white;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--green-light);
+    border-bottom: var(--yellow) solid;
+}
+.logo img {
+    margin-left: 6rem;
+    margin-top: 1.5rem;
+    width: 5rem;
+    height: 7.5rem;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 10rem;
+    margin-top: 1.5rem;
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+.container-1 {
+    background-color: white;
+    margin: auto;
+    padding-top: 5rem;
+    width: 99%;
+}
+.container-1 img {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+.container-1 h1 {
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem ;
+}
+.container-1 p {
+    font-size:1.5rem;
+    padding: 1.5rem;
+}
+.title {
+    background-color: white;
+    margin: auto;
+    padding-top: 1rem;
+    width: 99%;
+    padding-bottom: 4rem;
+}
+.title {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+.container-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 17rem);
+    gap: 2.6rem;
+    place-content: center;
+    background-color: white;
+    margin: auto;
+    width: 99%;
+    padding-bottom: 4rem;
+}
+.container-design {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+}
+.container-design p {
+    font-size:1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+

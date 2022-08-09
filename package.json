@@ -1,0 +1,19 @@
+{
+  "name": "proyecto_clau",
+  "version": "1.0.0",
+  "description": "Proyecto perritos clau",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TonyRodriz/proyecto_clau.git"
+  },
+  "author": "Antony Rodriguez <antonyrodgz4@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TonyRodriz/proyecto_clau/issues"
+  },
+  "homepage": "https://github.com/TonyRodriz/proyecto_clau#readme"
+}

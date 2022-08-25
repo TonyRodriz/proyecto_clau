@@ -1,44 +1,40 @@
-const token = 'IGQVJYSmJ6aVluRGdMTzNvQ3E0REV2dC12VUJ5MEl1cmtMUDlJVlhqd0RTNmozSjR2cmV1dGx1N1d5c0YzaHJpcHBkVVFhd2NwV3dwLUZAHSnlLUGlDWHU3QmFIWmdMb0g2WGo1QzJrT2xwLV9ob2dxOQZDZD'
-const apiuUrl = `https://graph.instagram.com/me/media?fields=thumbnail_url,media_url,caption,permalink&limit=9&access_token=${token}`;
+const api = 'https://instagram188.p.rapidapi.com/userpost/54063827267/12/%7Bend_cursor%7D'
 
-const buildHtmlPhotos = (data) => {
-  data.edges.map( (photo, index) => {
-    let section = document.createElement('section')
-    let imageContainer = document.createElement('div')
-    let image = document.createElement('img')
-    let caption = document.createElement('div')
-    let captionInfo = document.createElement('p')
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '6d9a47135fmsh862586f3c76b7a4p15886ajsn579af5fb2c3a',
+		'X-RapidAPI-Host': 'instagram188.p.rapidapi.com'
+	}
+};
 
-    captionInfo.className = 'instagram-captions'
-    captionInfo.innerText = photo.node.edge_media_to_caption.edges[0].node.text
+const caption = document.querySelector('.caption');
+const captionContenedor = document.querySelector('#caption-contenedor');
+const image = document.querySelector('.image');
+const imageContenedor = document.querySelector('.img-contenedor');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
 
-    caption.appendChild(captionInfo)
+const buildHtmlFeed = (data) => {
+  data.data.edges.map ((feed, index) => {
 
-    image.src = photo.node.thumbnail_src
-    image.alt = `foto clau-${index}`
-
-    imageContainer.appendChild(image)
-
-    section.appendChild(imageContainer)
-    section.appendChild(caption)
-
-    content.appendChild(section)
-  })
-
+     caption.innerText = feed.node.edge_media_to_caption.edges[0].node.text
+     image.src = photo.node.thumbnail_src
+     image.alt = `foto clau-${index}`
+ })
 }
+ const fetchData = async (apiUrl) =>  {
+   try {
+     const response = await fetch(apiUrl, options);
+     const data = await response.json();
+     console.log(data);
+     buildHtmlFeed(data)
+   } catch (error) {
+     console.log(error)
+   }
+ }
 
-const fetchData = async (apiUrl) =>  {
-  try {
-    const response = await fetch(apiUrl, token);
-    const data = await response.json();
-    console.log(data);
-    buildHtmlPhotos(data)
-  } catch (error) {
-    console.log(error)
-  }
-}
-
-fetchData(apiuUrl)
+ fetchData(api)
 
 
 

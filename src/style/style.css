@@ -21,9 +21,6 @@ html {
 body {
     background-color: var(--yellow6);
 }
-body .primera-imagen {
-    width: 100%;
-}
 header {
     width: 99%; 
     margin: auto;
@@ -53,6 +50,9 @@ header nav {
 }
 .logo img {
     height: 7.5rem;
+}
+.button-menu-desktop {
+    display: none;
 }
 .menu-mobile {
     background-color: white;
@@ -96,25 +96,28 @@ header nav {
     width: 60%;
     padding-bottom: 2rem;
 }
-.container-1 h1 {
-    font-size: 5rem;
+.container-1 div h1 {
+    font-size: 4rem;
     display: flex;
     justify-content: center;
     padding-bottom: 1rem ;
 }
-.container-1 p {
+.container-1 div p {
     font-size:2rem;
     padding: 1.5rem;
 }
 .title {
     background-color: white;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 1rem;
     width: 99%;
     padding-bottom: 4rem;
+    margin: auto;
 }
-.title {
-    font-size: 3rem;
+.title h2 {
+    font-size: 4rem;
     display: flex;
     justify-content: center;
 }
@@ -132,20 +135,22 @@ header nav {
     border-radius: 2rem;
 }
 .container-design p {
-    font-size:1.5rem;
+    font-size:2rem;
     display: flex;
     justify-content: center;
 }
 .instagram-button {
-    width: 100%;
+    background-color: white;
     display: flex;
     justify-content: center;
-    margin-left: 50%;
+    width: 99%;
+    margin: auto;
+    padding: 5rem;
 }
 .instagram-button button {
     background-color:var(--green);
-    width: 15rem;
-    padding: 2rem;
+    width: 12rem;
+    padding: 1rem;
     color: white;
     border-radius: 2rem;
     border: 2px solid var(--yellow6);
@@ -156,13 +161,11 @@ header nav {
     border: 0.2rem solid var(--green);
     color: var(--green);
 }
-
-
 .container-3 {
     background-color: white;
     margin: auto;
     width: 99%;
-    padding-top: 6rem;
+    padding-top: 1rem;
 }
 .container-3 img {
     display: flex;
@@ -170,17 +173,35 @@ header nav {
     width: 60%;
     padding-bottom: 2rem;
 }
-.container-3 h2 {
-    font-size: 5rem;
+.container-3 div h3 {
+    font-size: 4rem;
     display: flex;
     justify-content: center;
-    padding-bottom: 1rem ;
-    position: relative;
+    padding-bottom: 1rem;
 }
-.container-3 p {
+.container-3 div p {
     font-size:2rem;
     padding: 1.5rem;
-    position: relative;
+    padding-bottom: 5rem;
+}
+
+.title h3 {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.container-4 {
+    background-color: white;
+    width: 99%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-4 p {
+    font-size:2rem;
+    padding: 0 1.5rem;
     padding-bottom: 5rem;
 }
 
@@ -216,11 +237,106 @@ footer img {
 
 
 
-
-@media (max-width: 640px) {
-
+@media (min-width: 800px) {
+    .menu {
+        display: none;
+    }
+    .logo {
+        margin-left: 5rem;
+    }
+    .button-menu-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:var(--green);
+        padding: 2rem;
+        height: 3rem;
+        color: white;
+        border-radius: 2rem;
+        border: 2px solid var(--yellow6);
+        font-size: 2rem;
+        position: relative;
+        top: 3.5rem;
+        right: 4rem;
+    }
+    .button-menu-desktop:hover {
+        background-color: transparent;
+        border: 0.2rem solid var(--green);
+        color: var(--green);
+    }
+    .container-1 {
+        background-color: white;
+        display: flex;
+        margin: auto;
+        padding-top: 5rem;
+        width: 99%;
+    }
+    .container-1 img {
+        display: flex;
+        margin: auto;
+        width: 45%;
+        padding-bottom: 2rem;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .container-1 .text-container h1 {
+        font-size: 6rem;
+    }
+    .container-1 .text-container p {
+        font-size: 3rem;
+    }
+    .title h2 {
+        font-size: 6rem;
+        padding: 1rem;
+    }
+    .container-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 23%);
+        gap: 1rem;
+        place-content: center;
+        background-color: white;
+        margin: auto;
+        width: 99%;
+    }
+    .instagram-button button {
+        background-color:var(--green);
+        width: 17rem;
+        padding: 1rem;
+        color: white;
+        border-radius: 2rem;
+        border: 2px solid var(--yellow6);
+        font-size: 3rem;
+    }
+    .instagram-button button:hover {
+        background-color: transparent;
+        border: 0.2rem solid var(--green);
+        color: var(--green);
+    }
+    .container-3 {
+        display: flex;
+    }
+    .container-3 img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+    .container-3 div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-3 div h3 {
+        font-size: 6rem;
+        }
+    .container-3 div p {
+    font-size: 3rem;
+    }
 }
-
-@media (min-width: 641px) {
-
-  }

@@ -94,7 +94,10 @@ header nav {
     display: flex;
     margin: auto;
     width: 60%;
-    padding-bottom: 2rem;
+    padding: 2rem;
+}
+.container-1 div {
+    padding: 2rem;
 }
 .container-1 div h1 {
     font-size: 4rem;
@@ -171,7 +174,10 @@ header nav {
     display: flex;
     margin: auto;
     width: 60%;
-    padding-bottom: 2rem;
+    padding: 1rem;
+}
+.container-3 div {
+    padding: 1rem;
 }
 .container-3 div h3 {
     font-size: 4rem;
@@ -203,6 +209,28 @@ header nav {
     font-size:2rem;
     padding: 0 1.5rem;
     padding-bottom: 5rem;
+}
+.youtube-container {
+    background-color: white;
+    width: 99%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.youtube-text-img-container {
+    margin: 1rem;
+    width: 60vh;
+}
+.youtube-thumbnail {
+    border-radius: 2rem;
+    border: 2px solid var(--yellow6);
+
+}
+.youtube-title {
+    font-size: 2rem;
+
 }
 
 footer {

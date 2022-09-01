@@ -1,4 +1,69 @@
-const api = 'https://instagram188.p.rapidapi.com/userpost/54063827267/12/%7Bend_cursor%7D'
+const api = 'https://youtube-v31.p.rapidapi.com/playlistItems?playlistId=PLwqhGu6CWqsTkRrRwAhtsEOTkH0I1rzGd&part=snippet&maxResults=6';
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '6d9a47135fmsh862586f3c76b7a4p15886ajsn579af5fb2c3a',
+		'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+	}
+};
+
+const youtubeContainer = document.querySelector('.youtube-container');
+
+
+
+const buildHtmlYoutube = (data) => {
+  data.items.map ((data, index) => {
+    let textImgContainer = document.createElement('div');
+    let image = document.createElement('img');
+    let title = document.createElement('h4');
+    image.className = 'youtube-thumbnail';
+    title.className = 'youtube-title';
+    textImgContainer.className = 'youtube-text-img-container';
+    image.src = data.snippet.thumbnails.high.url;
+    title.innerText = data.snippet.title;
+    image.alt = `foto clau-${index}`;
+    textImgContainer.appendChild(image);
+    textImgContainer.appendChild(title);
+    youtubeContainer.appendChild(textImgContainer)
+})
+}
+
+const fetchData = async (api) =>  {
+  try {
+     const response = await fetch(api, options);
+     const data = await response.json();
+     console.log(data);
+     buildHtmlYoutube(data)
+   } catch (error) {
+     console.log(error)
+   }
+ }
+
+fetchData(api);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const api = 'https://instagram188.p.rapidapi.com/userpost/54063827267/12/%7Bend_cursor%7D'
 
 const options = {
 	method: 'GET',
@@ -36,7 +101,7 @@ const buildHtmlFeed = (data) => {
 
  fetchData(api)
 
-
+*/
 
 // const apiuUrl = 'https://instagram130.p.rapidapi.com/account-medias?userid=54063827267&first=6'
 

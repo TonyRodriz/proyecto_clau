@@ -21,6 +21,9 @@ html {
 body {
     background-color: var(--yellow6);
 }
+
+/* menu */
+
 header {
     width: 99%; 
     margin: auto;
@@ -54,6 +57,9 @@ header nav {
 .button-menu-desktop {
     display: none;
 }
+.inactive {
+    display: none;
+}
 .menu-mobile {
     background-color: white;
     position: absolute;
@@ -64,7 +70,6 @@ header nav {
     width: 90%;
     margin-top: 10rem;
     margin-left: 3rem;
-    display: none;
 }
 .menu-mobile ul {
     list-style: none;
@@ -73,17 +78,27 @@ header nav {
     display: flex;
     justify-content: center;
     font-size: 2.5rem;
+    align-items: center;
 }
 .menu-mobile ul li a {
     text-decoration: none;
-    color: var(--green);
     margin-bottom: 2rem;
+    background-color:var(--green);
+    width: 14rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 2rem;
+    border: 2px solid var(--yellow6);
+    font-size: 2rem;
 }
 .menu-mobile ul li img {
     margin-top: 2rem;
     height: 5rem;
     margin-left: 2rem;
 }
+
+/* Container 1 */
+
 .container-1 {
     background-color: white;
     margin: auto;
@@ -109,6 +124,9 @@ header nav {
     font-size:2rem;
     padding: 1.5rem;
 }
+
+/* Container 2 */
+
 .title {
     background-color: white;
     display: flex;
@@ -164,6 +182,8 @@ header nav {
     border: 0.2rem solid var(--green);
     color: var(--green);
 }
+
+/* Container 3 */
 .container-3 {
     background-color: white;
     margin: auto;
@@ -190,6 +210,8 @@ header nav {
     padding: 1.5rem;
     padding-bottom: 5rem;
 }
+
+/* Container 4 */
 
 .title h3 {
     font-size: 4rem;
@@ -222,48 +244,93 @@ header nav {
 .youtube-text-img-container {
     margin: 1rem;
     width: 60vh;
+    margin-bottom: 5rem;
 }
 .youtube-thumbnail {
+    width: 100%;
     border-radius: 2rem;
     border: 2px solid var(--yellow6);
 
 }
 .youtube-title {
     font-size: 2rem;
-
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 20rem;
-}
-footer img {
-    height: 15rem;
-    padding-left: 3rem;
-}
-.footer-right {
-    list-style: none;
-}
-.footer-right li a {
-    background-color: var(--green);
-    padding: 1rem;
-    font-size: 2rem;
-    text-decoration: none;
-    color: white;
-    border-radius: 1rem;
-    border: 0.2rem solid white;
-    margin-right: 5rem;
-}
-.footer-right li a:hover {
+/* FORM */
+
+.form-container {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 0;
+    margin: auto;
+    border: 2rem solid var(--yellow6);
+    border-radius: 5rem;
+}
+.form-container h3 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+}
+.input-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-container label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.input-container label span {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    margin: auto;
+}
+.input-container label input {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: 2px solid var(--yellow6);
+    }
+
+.input-container label .button-form {
+    background-color:var(--green);
+    width: 12rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 2rem;
+    border: 2px solid var(--yellow6);
+    font-size: 2rem;
+}
+.input-container label .form-file {
+    border: none;
+}
+.input-container label .button-form:hover {
+    background-color: transparent;
     border: 0.2rem solid var(--green);
     color: var(--green);
 }
 
 
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+}
+footer img {
+    height: 15rem;
+    margin: auto;
+}
+
+/* media queries */
 
 @media (min-width: 800px) {
     .menu {
@@ -366,5 +433,19 @@ footer img {
         }
     .container-3 div p {
     font-size: 3rem;
+    }
+    .title h3 {
+        font-size: 6rem;
+    }
+    .form-container {
+        border: 5rem solid var(--yellow6);
+        border-radius: 10rem;
+    }
+    .form-container h3 {
+        font-size: 6rem;
+    }
+    .input-container label input {
+        width: 50rem;
+        height: 4rem;
     }
 }

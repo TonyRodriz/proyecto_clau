@@ -1,3 +1,22 @@
+// DOM MENU
+
+const mobileMenu = document.querySelector('.menu-mobile');
+const menuHam = document.querySelector('.menu');
+
+menuHam.addEventListener('click', toggleMobileMenu);
+
+function toggleMobileMenu() {
+  mobileMenu.classList.toggle('inactive');
+}
+
+
+
+
+
+
+
+// API YOUTUBE
+
 const api = 'https://youtube-v31.p.rapidapi.com/playlistItems?playlistId=PLwqhGu6CWqsTkRrRwAhtsEOTkH0I1rzGd&part=snippet&maxResults=6';
 
 const options = {
